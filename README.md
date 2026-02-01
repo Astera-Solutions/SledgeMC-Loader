@@ -1,8 +1,8 @@
-# Sledge Loader (1.21.8)
+# Sledge Loader (1.21.11)
 
-The **Core Engine** of SledgeMC for Minecraft **1.21.8**.
+The **Core Engine** of SledgeMC for Minecraft **1.21.11**.
 
-This version of **Sledge Loader** is specifically built and optimized for Minecraft 1.21.8.
+This version of **Sledge Loader** is specifically built and optimized for Minecraft 1.21.11.
 
 ## Role
 - Discovers and loads mods from the `mods/` folder.
@@ -20,4 +20,3 @@ To build the Loader jar:
 ```bash
 ./gradlew clean build
 ```
-The shadow (all-in-one) artifact will be located in `build/libs/sledge-loader-1.21.11-all.jar`.
