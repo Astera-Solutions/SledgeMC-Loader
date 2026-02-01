@@ -1,8 +1,8 @@
-# Sledge Loader (1.21.11)
+# Sledge Loader (1.21.8)
 
-The **Core Engine** of SledgeMC for Minecraft **1.21.11**.
+The **Core Engine** of SledgeMC for Minecraft **1.21.8**.
 
-This version of **Sledge Loader** is specifically built and optimized for Minecraft 1.21.11.
+This version of **Sledge Loader** is specifically built and optimized for Minecraft 1.21.8.
 
 ## Role
 - Discovers and loads mods from the `mods/` folder.
