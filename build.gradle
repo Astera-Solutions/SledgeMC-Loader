@@ -34,7 +34,7 @@ dependencies {
 
 shadowJar {
     archiveClassifier = 'all'
-    archiveBaseName = 'sledge-loader-1.21.4'
+    archiveBaseName = 'sledge-loader-1.21.8'
     archiveVersion = ''
     mergeServiceFiles()
 }
