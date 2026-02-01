@@ -20,4 +20,3 @@ To build the Loader jar:
 ```bash
 ./gradlew clean build
 ```
-The shadow (all-in-one) artifact will be located in `build/libs/sledge-loader-1.21.8-all.jar`.
