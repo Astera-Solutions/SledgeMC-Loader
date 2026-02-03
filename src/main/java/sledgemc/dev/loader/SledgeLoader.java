@@ -88,9 +88,26 @@ public class SledgeLoader {
 
         // Register mixins
         for (ModContainer mod : discovered) {
+            // SpongePowered Mixins
             List<String> mixins = mod.getMetadata().getMixins();
             if (mixins != null && !mixins.isEmpty()) {
                 transformService.registerMixinConfigs(mod.getModId(), mixins);
+            }
+
+            // InjectaCore Mixins
+            List<String> injectaMixins = mod.getMetadata().getInjectaMixins();
+            if (injectaMixins != null && !injectaMixins.isEmpty()) {
+                for (String mixinClass : injectaMixins) {
+                    try {
+                        // Load the class to register it in the engine
+                        Class<?> clazz = Class.forName(mixinClass, false,
+                                Thread.currentThread().getContextClassLoader());
+                        sledgemc.dev.injecta.core.InjectaEngine.registerMixin(clazz);
+                        System.out.println("[SledgeMC] Registered Injecta mixin: " + mixinClass);
+                    } catch (ClassNotFoundException e) {
+                        System.err.println("[SledgeMC] Failed to find Injecta mixin: " + mixinClass);
+                    }
+                }
             }
         }
 

@@ -72,6 +72,10 @@ public class ModMetadata {
         return (transformers != null && transformers.mixins != null) ? transformers.mixins : Collections.emptyList();
     }
 
+    public List<String> getInjectaMixins() {
+        return (transformers != null && transformers.injecta != null) ? transformers.injecta : Collections.emptyList();
+    }
+
     public boolean supportsEnvironment(boolean isClient) {
         if ("*".equals(environment))
             return true;
@@ -103,6 +107,8 @@ public class ModMetadata {
     public static class TransformerConfig {
         @SerializedName("mixins")
         private List<String> mixins = new ArrayList<>();
+        @SerializedName("injecta")
+        private List<String> injecta = new ArrayList<>();
     }
 
     public static class EntrypointsConfig {

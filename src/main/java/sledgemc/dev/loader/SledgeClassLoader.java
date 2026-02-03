@@ -61,7 +61,9 @@ public class SledgeClassLoader extends URLClassLoader {
     protected Class<?> findClass(String name) throws ClassNotFoundException {
         byte[] bytes = getClassBytes(name);
         if (bytes != null) {
-            // HERE is where we would apply ASM transformations/Mixin in Phase 5
+            // Apply InjectaCore transformations
+            bytes = sledgemc.dev.injecta.core.InjectaTransformer.transform(name, bytes);
+
             return defineClass(name, bytes, 0, bytes.length);
         }
         return super.findClass(name);

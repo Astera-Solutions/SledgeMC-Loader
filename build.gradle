@@ -13,12 +13,16 @@ java {
 
 repositories {
     mavenCentral()
+    maven { url 'https://jitpack.io' }
     maven { url 'https://libraries.minecraft.net' }
     maven { url 'https://maven.fabricmc.net/' }
     maven { url 'https://repo.spongepowered.org/maven/' }
 }
 
 dependencies {
+    api 'com.github.Astera-Solutions:Sledge-API:v1.0.0'
+    api 'com.github.Astera-Solutions:InjectCore-Mixin:inject-core'
+    
     implementation "org.ow2.asm:asm:9.7.1"
     implementation "org.ow2.asm:asm-commons:9.7.1"
     implementation "org.ow2.asm:asm-tree:9.7.1"
